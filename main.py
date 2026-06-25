@@ -11,7 +11,7 @@ API_KEY = "bf1df7e642b94f189ff0272831717afb"
 bot = telebot.TeleBot(TOKEN)
 
 def get_signal(symbol):
-    url = f"https://YOUR_API_URL?symbol={symbol}&interval=1m&apikey={API_KEY}"
+    url = f"https://api.twelvedata.com/time_series?symbol={symbol}&interval=1min&outputsize=100&apikey={API_KEY}"
 
     data = requests.get(url).json()
 
